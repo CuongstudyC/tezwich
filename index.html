@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/Index.css">
+    <link rel="icon" type="image/x-icon" href="/image/logo.png">
+    <title>Document</title>
+</head>
+<body>
+    <header style="width: 90%;margin: auto;border-radius: 5px;border: solid 1px;">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-warning" style="border-radius:5px; height: 50px;">
+            <div class="container-fluid">
+                <div class="img-logo">
+                    <img src="image/logo.png" alt="logo" height="70px" style="position: relative; float: left; padding-top: 10%;">
+                    <img src="image/name.png" height="100px" style="padding-left: 20%;">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="html/products.html" target="view">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="html/feedback.html" target="view">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="html/signin.html" target="view">Sign In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header><br>
+ 
+
+    <div class="view-container">
+        <iframe class="responsive-iframe" name="view" frameborder="0" src="html/home.html" ></iframe>
+    </div>
+
+
+    <footer class="container">
+        <div style="text-align:center">
+            <h1 style="color: rgb(255, 193, 8);" id="contact">CONTACT US</h1>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="column">
+                    <div style="text-align: center; background-color:rgb(251, 230, 169);border-radius: 10px;">
+                        <h3>West Office</h3>
+                        <img src="image/location.png" width="14px"> 25 Hùng Vương, Phường 10, Tp. Đà Lạt<br>
+                        <img src="image/phone.png" width="14px"> 0123-456-789<br>
+                        <img src="image/email.png" width="14px"> AptechWest@gmail.com
+                    </div>
+                    <br> <br>
+                    <div style="text-align: center;background-color:rgb(251, 230, 169);border-radius: 10px;">
+                        <h3>South Office</h3>
+                            <img src="image/location.png" width="14px"> 590 Cách Mạng Tháng Tám, phường 11, Quận 3, Tp.HCM<br>
+                            <img src="image/phone.png" width="14px"> 0123-456-789<br>
+                            <img src="image/email.png" width="14px"> AptechSouth@gmail.com
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="margin-left: 1px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3192813592464!2d106.66408561467625!3d10.786840061951278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2zRlBUIEFwdGVjaCBIQ00gMSAtIEjhu4cgVGjhu5FuZyDEkMOgbyBU4bqhbyBM4bqtcCBUcsOsbmggVmnDqm4gUXXhu5FjIFThur8gKFNpbmNlIDE5OTkp!5e0!3m2!1svi!2s!4v1679514213021!5m2!1svi!2s"
+                    width="300" height="350" style="border: 5px; border-radius: 10px; margin: 0 0 0 15px;"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+        </div>
+    </footer>
+            <div class="copyright">
+                <div class="copyright_mid">
+                    <p class="text-dark">© Copyright@2023 <a href="#">Plant Palace</a> Co., Ltd. | All Rights Reserved. </p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </footer>
+    <script>
+        localStorage.pageIndex = 0;
+        if(localStorage.pageProduct ==0){
+            localStorage.pageIndex =1; 
+        } else{
+            localStorage.pageIndex =0; 
+        }
+    </script>
+</body>
+</html>

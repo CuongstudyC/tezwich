@@ -1,0 +1,101 @@
+.rate {
+    float: left;
+    padding: 0 10px 0 0;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float: right;
+    width: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 21px;
+    color:#ccc;
+	margin-bottom: 0;
+	line-height: 21px;
+}
+.rate:not(:checked) > label:before {
+    content: '\2605';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}   
+form {
+    display: flex;
+    flex-direction: column;
+   }
+   
+label {
+    margin-top: 0.5rem;
+   }
+   
+input, select, textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+   }
+   
+input[type="submit"] {
+    align-self: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+   }
+   
+input[type="submit"]:hover {
+    background-color: #0069d9;
+   }
+   
+#review-list {
+    margin-top: 2rem;
+   }
+   
+.review {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+   }
+   
+.review h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+   }
+   
+.review p {
+    margin-top: 0;
+   }
+   
+.review .rating {
+    margin-bottom: 0.5rem;
+   }
+   
+.review .rating span {
+    color: orange;
+    font-size: 1.2rem;
+    margin-right: 0.25rem;
+   }
+
+#reviews{
+    width: 70%;
+    margin: auto;
+}
+   

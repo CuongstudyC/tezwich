@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/Index.css">
+    <link rel="stylesheet" href="/css/signin.css">
+</head>
+<body>
+    
+
+    <form onsubmit="signin()" class="form">
+        <div class="input-box">
+            <h2 class="header" >Sign In</h2>
+            <br>            
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input type="email" class="input" id="email" required >                 
+            </div>
+            <div class="input-field">
+                <label for="password">Password</label>
+                <input type="password" class="input"  id="password"  required >                
+            </div>
+            <div>
+                <label for="check">Remember me</label> 
+                <input type="checkbox" class="check" >               
+            </div><br>
+            <div onclick="login()">
+                <a href="#" class="btn mt-4">Sign In</a>
+            </div>
+            <div class="signin">
+                <span>Create Account <a href="signup.html">Sign Up here</a></span>
+            </div>
+            
+   
+        </div><br>
+        <span class="facebook" onclick="fb()"> <i class="fa-brands fa-square-facebook"></i> </span>
+        <span class="google" onclick="gg()" > <i class="fab fa-google"></i></span>
+    </form>
+
+    
+
+    <script>
+        function login() {
+          var username = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          if (username.includes(" ") || username.length < 4)  {
+            alert("Tên đăng nhập phải có từ 4 ký tự và không chứa khoảng trắng.");
+            return;
+          }
+          if (password.length < 8) {
+            alert("Mật khẩu phải có từ 8 ký tự trở lên.");
+            return;
+          }
+          var storedUsername = localStorage.getItem("email");
+          var storedPassword = localStorage.getItem("password");
+          // Check if the input matches the stored data
+          if (username == storedUsername && password == storedPassword){
+            alert("Bạn đã đăng nhập thành công");
+            window.location.href = "/index.html";
+            return false;
+          }
+          else{
+            alert("Tên đăng nhập hoặc mật khẩu không chính xác.");
+          }
+        }
+        function register() {
+          var username = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          if (username.includes(" ") || username.length < 4) {
+            alert("Tên đăng nhập phải có từ 4 ký tự và không chứa khoảng trắng.");
+            return;
+          }
+          if (password.length < 8) {
+            alert("Mật khẩu phải có từ 8 ký tự trở lên.");
+            return;
+          }
+          localStorage.setItem("email", username);
+          localStorage.setItem("password", password);
+          alert("Bạn đã đăng ký thành công với tên đăng nhập " + username );
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+        }
+        function fb(){
+            window.location.href="https://www.facebook.com/"
+        }
+        function gg(){
+            window.location.href="https://accounts.google.com/v3/signin/identifier?dsh=S1560559716%3A1678937059784310&authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=vi&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession"
+        }
+    </script>
+</body>
+<script>
+  localStorage.pageIndex = 0;
+  if(localStorage.pageProduct ==0){
+      localStorage.pageIndex =1; 
+  } else{
+      localStorage.pageIndex =0; 
+  }
+</script>
+</html>
